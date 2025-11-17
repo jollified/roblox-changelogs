@@ -1,14 +1,36 @@
-this repo was made for one sole purpose:
-  patch notes in my roblox games.
-  it sounds silly, but it's a great system to synchronize the patchnotes of all your experiences!
+# patch notes sync system
 
-Q: how does it work?
-  A: i have created a custom discord bot, which reads when a game's placeid is mentioned in the #changelogs channel of my discord server,
-  the bot then adds the new patch notes converted from markdown to rich text (so it can be properly displayed in a roblox textlabel, with bold, italic, headers, and lists) to the game's patch notes file in this repo.
-  from there, i read the repo's raw file with an http request on roblox, and send that info to the client to display past and current patch notes forever!
+this repository exists for one purpose:
+**to store and synchronize patch notes for my roblox games.**
+it might sound funny, but it’s actually a super convenient way to keep every experience perfectly in sync!
 
-Q: why not just upload your patch notes here, and then have the discord bot publish the notes in your discord?
-  A: to be honest? its because i didn't think of doing that first 😭. but, doing it this way does have some pros,
-  like how my friends/co-workers who don't know how to use git or are on mobile a lot can easily publish patch notes anywhere at anytime,
-  and that i can just get the bot to format it to rich text and then publish that to github, rather than having to convert twice so that both roblox and discord could read the patch notes as intended.
-  overall, if i were to do something like this again or rewrite the bot, i would definitely just upload the notes here, and then have them read by http requests and a discord bot instead of uploading to discord first.
+---
+## ❓ how does it work?
+
+**a custom discord bot handles the whole pipeline:**
+
+1. when a game’s **place id** is mentioned in my server's `#changelogs` channel,
+   the bot detects it.
+2. the bot converts the provided **markdown** into **roblox richtext**
+3. it appends the formatted patch notes to the correct file in this repo.
+4. on roblox, the game reads the **raw file** via an http request.
+5. the client displays both current and past patch notes forever.
+
+---
+
+## ❓ why not upload the patch notes here first and have the discord bot publish them?
+
+honestly?
+i didn’t think of doing it that way at first 😭.
+
+but this order **does** have some upsides:
+
+* friends and collaborators who don’t use github (or are on mobile) can publish notes easily.
+* the bot only needs to convert the notes **once** (to richtext), instead of formatting separately for both discord and roblox.
+* it keeps the workflow lightweight and discord-friendly.
+
+if i were to rebuild this system, i’d probably flip the process -
+upload the notes directly to github and let both roblox and discord read from here using http and bot mirroring.
+
+but for now?
+this setup works great and keeps everything in sync.
