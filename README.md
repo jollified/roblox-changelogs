@@ -21,7 +21,7 @@ it might sound funny, but it’s actually a super convenient way to keep every e
 ## ❓ why not upload the patch notes here first and have the discord bot publish them?
 
 honestly?
-i didn’t think of doing it that way at first 😭.
+it's because didn’t think of doing it that way at first 😭.
 
 but this order **does** have some upsides:
 
